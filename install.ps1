@@ -36,8 +36,8 @@ Start-Process -FilePath "open-code.ahk2"
 Start-Process -FilePath "query-selected.ahk2"
 Start-Process -FilePath "send-unicode.ahk2"
 
-# Remove the install script
-Remove-Item install.ps1 -Force
-
 # Return to the starting path
 Set-Location $startingPath
+
+# Remove the install script
+Remove-Item install.ps1 -Force
