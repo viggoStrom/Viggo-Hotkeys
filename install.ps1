@@ -1,4 +1,7 @@
 
+# Save starting path
+$startingPath = Get-Location
+
 # Move to the autostart folder
 Set-Location "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
 
@@ -35,3 +38,6 @@ Start-Process -FilePath "send-unicode.ahk2"
 
 # Remove the install script
 Remove-Item install.ps1 -Force
+
+# Return to the starting path
+Set-Location $startingPath
