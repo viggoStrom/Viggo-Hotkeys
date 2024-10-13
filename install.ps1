@@ -20,11 +20,11 @@ if ($ahkFiles -or $ahk2Files) {
 }
 
 # Download all the seperate AHK files
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/browser-navigation.ahk2" -OutFile "browser-navigation.ahk2"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/open-browser.ahk2" -OutFile "open-browser.ahk2"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/open-code.ahk2" -OutFile "open-code.ahk2"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/query-selected.ahk2" -OutFile "query-selected.ahk2"
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/send-unicode.ahk2" -OutFile "send-unicode.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/v2-scripts/browser-navigation.ahk2" -OutFile "browser-navigation.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/v2-scripts/open-browser.ahk2" -OutFile "open-browser.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/v2-scripts/open-code.ahk2" -OutFile "open-code.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/v2-scripts/query-selected.ahk2" -OutFile "query-selected.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/v2-scripts/send-unicode.ahk2" -OutFile "send-unicode.ahk2"
 
 # Run all the AHK files 
 Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList "browser-navigation.ahk2"
