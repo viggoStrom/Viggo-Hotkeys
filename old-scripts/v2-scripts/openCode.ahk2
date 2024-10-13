@@ -1,0 +1,10 @@
+#z:: {
+    Run "C:\Program Files\Microsoft VS Code\Code.exe -n "
+
+    if WinWait("Visual Studio Code", "", 1) {
+        WinActivate
+        WinMaximize
+    } else {
+        MsgBox "timed out"
+    }
+}

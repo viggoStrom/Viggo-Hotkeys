@@ -1,0 +1,9 @@
+#c::{    
+    Run "C:\Program Files\Mozilla Firefox\firefox.exe -foreground -new-window https://web.skola24.se/timetable/timetable-viewer/it-gymnasiet.skola24.se/NTI`%20Uppsala/"
+
+    if WinWait("Mozilla Firefox", "", 1) {
+        WinActivate
+    } Else {
+        MsgBox "timed out"
+    }
+}

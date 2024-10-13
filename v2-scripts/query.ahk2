@@ -1,0 +1,34 @@
+
+; Preferences
+MyBrowser := "C:\Program Files\Mozilla Firefox\firefox.exe" ; "C:\Program Files\Google\Chrome\Application\chrome.exe"
+ExeToFocus := "firefox.exe" ; "chrome.exe"
+MySearchEngine := "https://duckduckgo.com/?t=ffab&q=" ; "https://www.google.se/search?q="
+
+^q:: {
+    ; Copy the selected text to the clipboard
+    A_Clipboard := ""
+    Send "^c"
+
+    if !ClipWait(1) {
+        ; Error handling
+        MsgBox("Something went wrong with the clipboard")
+        return
+
+    } else {
+        ; Format the clipboard
+        clipboard := StrReplace(A_Clipboard, A_Space, "+")
+        clipboard := StrReplace(clipboard, A_Tab, "+")
+
+        ; Make the search URL
+        url := MySearchEngine . clipboard
+
+        ; Open the URL in the browser (this assumes the browser accepts URLs as the first argument)
+        Run MyBrowser . " " . url
+
+        ; Focus the browser window
+        ; I don't like this solution, but it works. WinWait hasn't made a difference so this just works
+        WinActivate("ahk_exe " . ExeToFocus)
+        WinActivate("ahk_exe " . ExeToFocus)
+        WinActivate("ahk_exe " . ExeToFocus)
+    }
+}
