@@ -8,7 +8,7 @@ I am a real power user, sometimes the OS doesn't provide everything I need, so I
 
 2. Run the following command in PowerShell:
 ```bash
-wget https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/install.ps1
+wget https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/refs/heads/main/install.ps1 -OutFile install.ps1;
 ./install.ps1
 ```
 
