@@ -1,0 +1,12 @@
+; Preferences
+MyCodeEditor := "C:\Users\viggo\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+ExeToFocus := StrSplit(MyCodeEditor, "\").Pop()
+
+#z:: {
+    ; Open the code editor
+    RunWait(MyCodeEditor)
+
+    ; Focus the code editor window
+    WinActivate "ahk_exe " . ExeToFocus
+    WinMaximize "ahk_exe " . ExeToFocus ; VScode doesn't maximize the window by default
+}

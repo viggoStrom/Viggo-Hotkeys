@@ -4,7 +4,7 @@
 I am a real power user, sometimes the OS doesn't provide everything I need, so I have to create my own hotkeys. I have used [AutoHotkey](https://www.autohotkey.com/) for mine.
 
 ## Installation
-1. Have [AutoHotkey V1](https://www.autohotkey.com/) and [AutoHotkey V2](https://www.autohotkey.com/) installed.
+1. Have [AutoHotkey V2](https://www.autohotkey.com/) installed.
 
 2. Run the following command in PowerShell:
 ```bash

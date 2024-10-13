@@ -1,7 +1,6 @@
-
 ; Preferences
 MyBrowser := "C:\Program Files\Mozilla Firefox\firefox.exe" ; "C:\Program Files\Google\Chrome\Application\chrome.exe"
-ExeToFocus := "firefox.exe" ; "chrome.exe"
+ExeToFocus := StrSplit(MyBrowser, "\").Pop() ; Gets the exe name. If it doesn't work, just hardcode it to the exe file e.g. "firefox.exe"
 MySearchEngine := "https://duckduckgo.com/?t=ffab&q=" ; "https://www.google.se/search?q="
 
 ^q:: {

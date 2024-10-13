@@ -20,11 +20,11 @@ if ($ahkFiles -or $ahk2Files) {
 }
 
 # Download all the seperate AHK files
-Invoke-WebRequest -Uri <URI>
-Invoke-WebRequest -Uri <URI>
-Invoke-WebRequest -Uri <URI>
-Invoke-WebRequest -Uri <URI>
-Invoke-WebRequest -Uri <URI>
+Invoke-WebRequest -Uri 
+Invoke-WebRequest -Uri 
+Invoke-WebRequest -Uri 
+Invoke-WebRequest -Uri 
+Invoke-WebRequest -Uri 
 
 # Run all the AHK files
 Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList <fileName>

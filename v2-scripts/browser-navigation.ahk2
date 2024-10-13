@@ -1,0 +1,15 @@
+F3:: {
+    if GetKeyState("Alt", "P") {
+        return
+    }
+    
+    Send "{Browser_Back}"
+}
+
+F4:: {
+    if GetKeyState("Alt", "P") {
+        return
+    }
+    
+    Send "{Browser_Forward}"
+}
