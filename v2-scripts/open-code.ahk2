@@ -1,3 +1,5 @@
+TraySetIcon "%SystemRoot%\System32\imageres.dll", 263 ; Sets the tray icon to cmd icon
+
 ; Preferences
 MyCodeEditor := "C:\Users\viggo\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 ExeToFocus := StrSplit(MyCodeEditor, "\").Pop()

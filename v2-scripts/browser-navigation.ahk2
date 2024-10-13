@@ -1,3 +1,5 @@
+TraySetIcon "%SystemRoot%\System32\imageres.dll", 256 ; Sets the tray icon to a back arrow
+
 F3:: {
     if GetKeyState("Alt", "P") {
         return

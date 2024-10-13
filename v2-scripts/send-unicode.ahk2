@@ -1,3 +1,5 @@
+TraySetIcon "%SystemRoot%\System32\SHELL32.dll", 307 ; Sets the tray icon to a window of some sort
+
 #Space:: {
     Send "{U+00A0}"
 }

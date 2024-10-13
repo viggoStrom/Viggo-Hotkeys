@@ -1,3 +1,5 @@
+TraySetIcon "%SystemRoot%\System32\imageres.dll", 272 ; Sets the tray icon to a magnifying glass with an arrow
+
 ; Preferences
 MyBrowser := "C:\Program Files\Mozilla Firefox\firefox.exe" ; "C:\Program Files\Google\Chrome\Application\chrome.exe"
 ExeToFocus := StrSplit(MyBrowser, "\").Pop() ; Gets the exe name. If it doesn't work, just hardcode it to the exe file e.g. "firefox.exe"
