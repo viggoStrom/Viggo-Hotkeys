@@ -20,15 +20,15 @@ if ($ahkFiles -or $ahk2Files) {
 }
 
 # Download all the seperate AHK files
-Invoke-WebRequest -Uri 
-Invoke-WebRequest -Uri 
-Invoke-WebRequest -Uri 
-Invoke-WebRequest -Uri 
-Invoke-WebRequest -Uri 
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/browser-navigation.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/open-browser.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/open-code.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/query-selected.ahk2"
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/viggoStrom/Viggo-Hotkeys/blob/main/v2-scripts/send-unicode.ahk2"
 
 # Run all the AHK files
-Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList <fileName>
-Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList <fileName>
-Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList <fileName>
-Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList <fileName>
-Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList <fileName>
+Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList "browser-navigation.ahk2"
+Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList "open-browser.ahk2"
+Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList "open-code.ahk2"
+Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList "query-selected.ahk2"
+Start-Process -FilePath "C:\Program Files\AutoHotkey\AutoHotkey.exe" -ArgumentList "send-unicode.ahk2"
