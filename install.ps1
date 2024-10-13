@@ -40,4 +40,4 @@ Start-Process -FilePath "send-unicode.ahk2"
 Set-Location $startingPath
 
 # Remove the install script
-Remove-Item install.ps1 -Force
+Remove-Item ($startingPath + install.ps1) -Force
