@@ -12,7 +12,6 @@ MySearchEngine := "https://duckduckgo.com/?t=ffab&q=" ; "https://www.google.se/s
 
     if !ClipWait(1) {
         ; Error handling
-        MsgBox("Something went wrong with the clipboard")
         return
 
     } else {
