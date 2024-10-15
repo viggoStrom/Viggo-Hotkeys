@@ -2,8 +2,12 @@ TraySetIcon "C:\Program Files\Internet Explorer\iexplore.exe"
 
 ; Preferences
 MyBrowser := "C:\Program Files\Mozilla Firefox\firefox.exe" ; "C:\Program Files\Google\Chrome\Application\chrome.exe"
+ExeToFocus := StrSplit(MyBrowser, "\").Pop()
 
 #c:: {
     ; Open the browser
     RunWait(MyBrowser)
+
+    ; Focus the browser window
+    WinActivate("ahk_exe " . ExeToFocus)
 }
