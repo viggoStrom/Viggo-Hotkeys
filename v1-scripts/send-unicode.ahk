@@ -11,13 +11,7 @@ catch {
 ; Tray text
 Menu, Tray, Tip, AHK - Hotkeys to more easily type Unicode characters
 
-; # Quick Access Keys #
-
+; # Hotkeys #
 #Space::
     Send, {U+00A0}
 Return
-
-; # Hotkeys #
-^u::
-    InputBox, unicode, Unicode Character, Enter the Unicode character you want to send
-    MsgBox, %unicode%
