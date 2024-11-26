@@ -2,7 +2,7 @@
 try {
     ; Set tray icon to a magnifying glass with a tiny arrow
     Menu, Tray, Icon, %SystemRoot%\System32\imageres.dll, 272
-    Menu, Tray, Tip, Open Browser Hotkey
+    Menu, Tray, Tip, Search for the selected text
 }
 catch {
     ; Backup icon
@@ -13,9 +13,9 @@ catch {
 ; # Search Engine #
 SearchEngine := "https://duckduckgo.com/?t=ffab&q="
 ; SearchEngine := "https://google.com/search?q="
-; SearchEngine := "https://ecosia.org/search?q="
-; SearchEngine := "https://bing.com/search?q="
-; SearchEngine := "https://yahoo.com/search?q="
+; SearchEngine := "https://ecosia.org/search?q=" ; Syntax may not work
+; SearchEngine := "https://bing.com/search?q=" ; Syntax may not work
+; SearchEngine := "https://yahoo.com/search?q=" ; Syntax may not work
 
 ; # Find Browser Paths #
 ; Try some firefox paths and then some chrome paths.
@@ -50,33 +50,31 @@ Func(FindBrowserPath) {
     return BrowserPath
 }
 
-; # Define Path #  -new-tab 
+; # Define Path
 BrowserPath := Func(FindBrowserPath) . " " . SearchEngine
 
 ; # Hotkey #
 ^q::
     ; Clear clipboard
-    Clipboard := ""
+    A_Clipboard := ""
+
     ; Copy selected text
     Send, ^c
-    ; Wait for clipboard to update
-    if ClipWait, 1 {
-        MsgBox, Clipboard timed out
-        Return ; Return on timeout
-    }
-    ; Format the clipboard
-    clipboard := StrReplace(A_Clipboard, A_Space, "+")
-    clipboard := StrReplace(clipboard, A_Tab, "+")
-    
-    BrowserPath := BrowserPath . Clipboard
 
-    ; TODO, fix the focus issue
-    WinActivate, ahk_exe %BrowserPath%
-    WinActivate, ahk_exe %BrowserPath%
-    WinActivate, ahk_exe %BrowserPath%
-    WinActivate, ahk_exe %BrowserPath%
-    WinActivate, ahk_exe %BrowserPath%
-    WinActivate, ahk_exe %BrowserPath%
-    RunWait, %BrowserPath%
-    WinActivate, ahk_exe %BrowserPath%
+    ; Wait for clipboard to update
+    ClipWait
+
+    ; Format the clipboard
+    ClipValue := A_Clipboard
+    ClipValue := StrReplace(ClipValue, A_Space, "+")
+    ClipValue := StrReplace(ClipValue, A_Tab, "+")
+    
+    ; Combine the clipboard with the search engine URI
+    SearchPath := BrowserPath . ClipValue
+
+    RunWait, %SearchPath%
+
+    ; When the browser is already in focus it loses focus on the tab. 
+    ; This is just a workaround to bring the browser back to focus.
+    Click, 960, 540
 return
