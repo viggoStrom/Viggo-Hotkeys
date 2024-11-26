@@ -1,13 +1,14 @@
 try {
     ; Set tray icon to a back arrow
     Menu, Tray, Icon, %SystemRoot%\System32\shell32.dll, 298
-    Menu, Tray, Tip, F3 and F4 do browser back and forward navigation
 }
 catch {
     ; Backup icon
     ; Set tray icon to a set of two arrows
     try Menu, Tray, Icon, %SystemRoot%\System32\Dxpserver.exe
 }
+; Tray text
+Menu, Tray, Tip, AHK - F3 and F4 do browser back and forward navigation
 
 F3::
     ; If the Alt key is pressed, don't do anything

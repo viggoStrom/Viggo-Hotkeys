@@ -2,13 +2,14 @@
 try {
     ; Set tray icon to a magnifying glass with a tiny arrow
     Menu, Tray, Icon, %SystemRoot%\System32\imageres.dll, 272
-    Menu, Tray, Tip, Search for the selected text
 }
 catch {
     ; Backup icon
     ; Set tray icon to a magnifying glass
     try Menu, Tray, Icon, %SystemRoot%\System32\shell32.dll, 210
 }
+; Tray text
+Menu, Tray, Tip, AHK - Search for the selected text
 
 ; # Search Engine #
 SearchEngine := "https://duckduckgo.com/?t=ffab&q="

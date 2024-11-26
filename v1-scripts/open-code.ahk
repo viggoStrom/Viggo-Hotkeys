@@ -2,13 +2,14 @@
 try {
     ; Set tray icon to cmd
     Menu, Tray, Icon, %SystemRoot%\System32\cmd.exe
-    Menu, Tray, Tip, Open Code Hotkey
 }
 catch {
     ; Backup icon
     ; Set tray icon to powershell
     try Menu, Tray, Icon, %SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe
 }
+; Tray text
+Menu, Tray, Tip, AHK - Open Code Hotkey
 
 ; # Find Path #
 ; Try the two common paths for VS Code:
