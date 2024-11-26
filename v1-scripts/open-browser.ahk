@@ -26,11 +26,11 @@ Func(FindBrowserPath) {
     ProgramFilesX86 := A_ProgramFiles . " (x86)"
 
     BrowserPaths := []
-    ; Firefox
+    ; Firefox paths
     BrowserPaths.Push(A_ProgramFiles . "\Mozilla Firefox\firefox.exe")
     BrowserPaths.Push(ProgramFilesX86 . "\Mozilla Firefox\firefox.exe")
     BrowserPaths.Push(AppDataLocal . "\Mozilla Firefox\firefox.exe")
-    ; Chrome
+    ; Chrome paths
     BrowserPaths.Push(A_ProgramFiles . "\Google\Chrome\Application\chrome.exe")
     BrowserPaths.Push(ProgramFilesX86 . "\Google\Chrome\Application\chrome.exe")
     BrowserPaths.Push(AppDataLocal . "\Google\Chrome\Application\chrome.exe")

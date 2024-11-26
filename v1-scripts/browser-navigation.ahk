@@ -1,7 +1,7 @@
 try {
     ; Set tray icon to a back arrow
     Menu, Tray, Icon, %SystemRoot%\System32\shell32.dll, 298
-    Menu, Tray, Tip, Forward and Back Hotkeys for Browser
+    Menu, Tray, Tip, F3 and F4 do browser back and forward navigation
 }
 catch {
     ; Backup icon

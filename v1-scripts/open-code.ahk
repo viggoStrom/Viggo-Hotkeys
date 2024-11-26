@@ -19,9 +19,9 @@ Func(FindIDEPath) {
     AppDataLocal := DriveLetter . "\Users\" . A_UserName . "\AppData\Local"
 
     IDEPaths := []
-    ; Appdata
+    ; vscode in Appdata
     IDEPaths.Push(AppDataLocal . "\Programs\Microsoft VS Code\Code.exe")
-    ; Program Files
+    ; vscode in Program Files
     IDEPaths.Push(A_ProgramFiles . "\Microsoft VS Code\Code.exe")
 
     IDEPath := ""
@@ -51,4 +51,4 @@ IDEEmptyWinTitle := "Visual Studio Code"
     ; Wait for the IDE to open to maximize it
     WinActivate, %IDEEmptyWinTitle%
     WinMaximize, %IDEEmptyWinTitle%
-    Return
+Return
