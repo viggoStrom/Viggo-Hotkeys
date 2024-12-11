@@ -69,13 +69,18 @@ BrowserPath := Func(FindBrowserPath) . " " . SearchEngine
     ClipValue := A_Clipboard
     ClipValue := StrReplace(ClipValue, A_Space, "+")
     ClipValue := StrReplace(ClipValue, A_Tab, "+")
-    
+
     ; Combine the clipboard with the search engine URI
     SearchPath := BrowserPath . ClipValue
 
-    RunWait, %SearchPath%
+    RunWait, %SearchPath%, , , PID
 
-    ; When the browser is already in focus it loses focus on the tab. 
-    ; This is just a workaround to bring the browser back to focus.
-    Click, 960, 540
+    ; Move cursor to the browser window
+    WinActivate, ahk_pid %PID%
+
+
+
+    ; When the browser is already in focus it loses focus on the tab.
+    ;  Clicking it is just a workaround to bring the browser back to focus.
+    ; Click
 return
