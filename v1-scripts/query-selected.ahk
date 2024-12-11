@@ -75,12 +75,6 @@ BrowserPath := Func(FindBrowserPath) . " " . SearchEngine
 
     RunWait, %SearchPath%, , , PID
 
-    ; Move cursor to the browser window
-    WinActivate, ahk_pid %PID%
-
-
-
-    ; When the browser is already in focus it loses focus on the tab.
-    ;  Clicking it is just a workaround to bring the browser back to focus.
-    ; Click
+    ; ONLY FOR FIREFOX
+    WinActivate, ahk_class MozillaWindowClass
 return
